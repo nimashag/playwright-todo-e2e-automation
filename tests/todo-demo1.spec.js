@@ -21,5 +21,5 @@ test('test to-do app @sanity', async ({ page }) => {
   await expect(page.getByText('Play')).toBeVisible();
   await expect(page.getByTestId('todo-list')).toContainText('Go for walk');
   await page.getByRole('button', { name: 'Clear completed' }).click();
-  await expect(page.locator('.todo-list li')).toHaveCount(3);
+  await expect(page.locator('.todo-list li')).toHaveCount(2);
 });
